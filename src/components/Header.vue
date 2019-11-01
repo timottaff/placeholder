@@ -1,6 +1,6 @@
 <template>
     <div>
         Ini Header
-        <br>Perubahan Baru</br>
+        <br>Perubahan Baru
     </div>
 </template>
