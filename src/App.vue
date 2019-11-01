@@ -17,20 +17,26 @@
 
     <v-content>
       <HelloWorld/>
+      <Header/>
+      <QuestionBox/>
     </v-content>
   </v-app>
+  
+  
 </template>
 
 <script>
 import HelloWorld from './components/HelloWorld';
-import Header from './components/Header';
-import QuestionBox from './components/QuestionBox';
+import Header from './components/Header.vue';
+import QuestionBox from './components/QuestionBox.vue';
 
 
 export default {
   name: 'App',
   components: {
     HelloWorld,
+    Header,
+    QuestionBox
   },
   data: () => ({
     //
