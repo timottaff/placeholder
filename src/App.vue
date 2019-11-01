@@ -1,7 +1,8 @@
 <template>
   <div id="app">
     <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+    <Header />
+    <QuestionBox />
   </div>
 </template>
 
@@ -12,7 +13,8 @@ import QuestionBox from './components/QuestionBox.vue'
 export default {
   name: 'app',
   components: {
-    HelloWorld
+    Header,
+    QuestionBox
   }
 }
 </script>
