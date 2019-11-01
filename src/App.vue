@@ -23,6 +23,9 @@
 
 <script>
 import HelloWorld from './components/HelloWorld';
+import Header from './components/Header';
+import QuestionBox from './components/QuestionBox';
+
 
 export default {
   name: 'App',
