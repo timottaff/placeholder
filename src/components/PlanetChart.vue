@@ -1,5 +1,6 @@
 <template>
   <div>
+    <v-btn v-on:click="addData">Add Data</v-btn>
     <canvas id="planet-chart"></canvas>
   </div>
 </template>
@@ -18,18 +19,32 @@ export default {
         data: chartData.data,
         options: chartData.options
       });
-    }
-    addData(chart, label, data) {
-      chart.data.labels.push(label);
-      chart.data.datasets.forEach((dataset) => {
-        dataset.data.push(data);
+    },
+    randomGeneratorNumber() {
+      this.number = this.number + 60;
+      if (this.number>200){
+        this.number = 0;
+      }
+    },
+    randomGeneratorWord() {
+      this.word = this.word + 'A';
+      if (this.word == 'AAAA'){
+        this.word = 'A'
+      }
+    },
+    addData() {
+      this.planetChartData.data.labels.push('A');
+      this.planetChartData.data.datasets.forEach((dataset) => {
+        dataset.data.push(this.randomGeneratorNumber());
       });
-      chart.update();
+      this.planetChartData.update();
     }
   },
   data() {
     return {
-      planetChartData: planetChartData
+      planetChartData: planetChartData,
+      number: 0,
+      word: 'A' 
     };
   },
   mounted() {
