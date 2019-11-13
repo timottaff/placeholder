@@ -15,6 +15,7 @@
       <Header />
       <QuestionBox />
       <PlanetChart />
+      <PlanetChartInput />
     </v-content>
   </v-app>
 </template>
@@ -23,13 +24,15 @@
 import Header from "./components/Header.vue";
 import QuestionBox from "./components/QuestionBox.vue";
 import PlanetChart from "./components/PlanetChart.vue";
+import PlanetChartInput from "./components/PlanetChartInput.vue";
 
 export default {
   name: "App",
   components: {
     Header,
     QuestionBox,
-    PlanetChart
-  }  
+    PlanetChart,
+    PlanetChartInput
+  }, 
 };
 </script>
