@@ -1,6 +1,6 @@
 <template>
   <div>
-    <canvas id="planet-chart"></canvas>  
+    <canvas id="planet-chart"></canvas>
   </div>
 </template>
 
@@ -18,6 +18,13 @@ export default {
         data: chartData.data,
         options: chartData.options
       });
+    }
+    addData(chart, label, data) {
+      chart.data.labels.push(label);
+      chart.data.datasets.forEach((dataset) => {
+        dataset.data.push(data);
+      });
+      chart.update();
     }
   },
   data() {
