@@ -11,10 +11,10 @@
       </v-btn>
     </v-app-bar>
 
-    <v-content>
-      <canvas id="planet-chart"></canvas>
+    <v-content>     
       <Header />
       <QuestionBox />
+      <PlanetChart />
     </v-content>
   </v-app>
 </template>
@@ -22,32 +22,14 @@
 <script>
 import Header from "./components/Header.vue";
 import QuestionBox from "./components/QuestionBox.vue";
-import Chart from "chart.js";
-import planetChartData from './components/chart-data.js';
+import PlanetChart from "./components/PlanetChart.vue";
 
 export default {
   name: "App",
   components: {
     Header,
-    QuestionBox
-  },
-  methods: {
-  createChart(chartId, chartData) {
-    const ctx = document.getElementById(chartId);
-    const myChart = new Chart(ctx, {
-      type: chartData.type,
-      data: chartData.data,
-      options: chartData.options,
-      });
-    }
-  },
-  data () {
-    return {
-    planetChartData: planetChartData,
-    }
-  },
-  mounted() {
-    this.createChart('planet-chart', this.planetChartData);
-  }
+    QuestionBox,
+    PlanetChart
+  }  
 };
 </script>
