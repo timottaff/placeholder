@@ -16,7 +16,6 @@
     </v-app-bar>
 
     <v-content>
-      <HelloWorld/>
       <Header/>
       <QuestionBox/>
     </v-content>
@@ -26,7 +25,6 @@
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld';
 import Header from './components/Header.vue';
 import QuestionBox from './components/QuestionBox.vue';
 
@@ -34,7 +32,6 @@ import QuestionBox from './components/QuestionBox.vue';
 export default {
   name: 'App',
   components: {
-    HelloWorld,
     Header,
     QuestionBox
   },
