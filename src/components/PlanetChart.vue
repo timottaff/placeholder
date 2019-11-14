@@ -20,22 +20,10 @@ export default {
         options: chartData.options
       });
     },
-    randomGeneratorNumber() {
-      this.number = this.number + 60;
-      if (this.number>200){
-        this.number = 0;
-      }
-    },
-    randomGeneratorWord() {
-      this.word = this.word + 'A';
-      if (this.word == 'AAAA'){
-        this.word = 'A'
-      }
-    },
     addData() {
       this.planetChartData.data.labels.push('A');
       this.planetChartData.data.datasets.forEach((dataset) => {
-        dataset.data.push(this.randomGeneratorNumber());
+        dataset.data.push(50);
       });
       this.planetChartData.update();
     }
