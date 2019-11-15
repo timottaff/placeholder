@@ -30,7 +30,7 @@
             v-for="i in 4"
             :key="i"
             :href="`#tab-${i}`"
-            v-text="tabu[i-1]"
+            v-text="tab[i-1]"
           >
           </v-tab>
         </v-tabs>
@@ -44,7 +44,7 @@
         :value="`tab-${i}`"
       >
         <v-card flat>
-          <v-card-text v-text="text"></v-card-text>
+          <v-card-text v-text="text[i-1]"></v-card-text>
         </v-card>
       </v-tab-item>
     </v-tabs-items>
@@ -55,9 +55,9 @@
   export default {
     data () {
       return {
-        tabu: ['Menu', 'Golden', 'Experience', 'Requiem'],
+        tab: ['Menu', 'Golden', 'Experience', 'Requiem'],
         model: 'tab-1',
-        text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
+        text: ['Lorem ipsum dolor sit amet', 'Kono Giorno Giovanna ni wa Yume ga Aru', 'Bnagsat', 'Ini ke 4']
       }
     },
   }
