@@ -1,7 +1,7 @@
 export const planetChartData = {
   type: 'line',
   data: {
-    labels: ['Mercury', 'Venus', 'Earth', 'Mars', 'Jupiter', 'Saturn', 'Uranus', 'Neptune'],
+    labels: ['Mercur', 'Venus', 'Earth', 'Mars', 'Jupiter', 'Saturn', 'Uranus', 'Neptune'],
     datasets: [
       {
         label: null,
