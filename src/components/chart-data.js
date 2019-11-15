@@ -3,27 +3,19 @@ export const planetChartData = {
   data: {
     labels: ['Mercury', 'Venus', 'Earth', 'Mars', 'Jupiter', 'Saturn', 'Uranus', 'Neptune'],
     datasets: [
-      { // one line graph
-        label: 'Number of Moons',
+      {
+        label: null,
         data: [],
-        backgroundColor: [
-          'rgba(54,73,93,.5)', // Blue
-        ],
-        borderColor: [
-          '#36495d',
-        ],
-        borderWidth: 3
+        backgroundColor: [],
+        borderColor: [],
+        borderWidth: 0
       },
-      { // another line graph
-        label: 'Planet Mass (x1,000 km)',
+      {
+        label: null,
         data: [],
-        backgroundColor: [
-          'rgba(71, 183,132,.5)', // Green
-        ],
-        borderColor: [
-          '#47b784',
-        ],
-        borderWidth: 3
+        backgroundColor: [],
+        borderColor: [],
+        borderWidth: 0
       }
     ]
   },
@@ -40,5 +32,21 @@ export const planetChartData = {
     }
   }
 }
+
+let url = "https://api.myjson.com/bins/14lxqe";
+let i = 0;
+fetch(url)
+  .then(response => response.json())
+  .then(data => {
+    while (i<2){
+    planetChartData.data.datasets[i].label = data.datasets[i].label;
+    planetChartData.data.datasets[i].data = data.datasets[i].data;
+    planetChartData.data.datasets[i].backgroundColor = data.datasets[i].backgroundColor;
+    planetChartData.data.datasets[i].borderColor = data.datasets[i].borderColor;
+    planetChartData.data.datasets[i].borderWidth = data.datasets[i].borderWidth;
+    i++;
+    }
+  });
+
 
 export default planetChartData;
