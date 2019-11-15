@@ -1,21 +1,21 @@
 export const planetChartData = {
   type: 'line',
   data: {
-    labels: ['Mercur', 'Venus', 'Earth', 'Mars', 'Jupiter', 'Saturn', 'Uranus', 'Neptune'],
+    labels: ['Mercury', 'Venus', 'Earth', 'Mars', 'Jupiter', 'Saturn', 'Uranus', 'Neptune'],
     datasets: [
       {
         label: null,
         data: [],
         backgroundColor: [],
         borderColor: [],
-        borderWidth: 0
+        borderWidth: []
       },
       {
         label: null,
         data: [],
         backgroundColor: [],
         borderColor: [],
-        borderWidth: 0
+        borderWidth: []
       }
     ]
   },
