@@ -4,7 +4,7 @@ const T = new twit(config)
 
 var retweet = function () {
     var params = {
-        q: '#Dog', // Hashtags to search tweets within
+        q: '#Giveaway', // Hashtags to search tweets within
         result_type: 'recent',
         lang: 'en'
     }

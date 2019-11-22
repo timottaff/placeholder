@@ -13,7 +13,7 @@ fetch(url)
   .then(response => response.json())
   .then(data => {
     console.log(data.employee.name)
-    T.post('statuses/update', { status: 'Sehingga, ' + data.employee.name }, function (err, data, response) {
+    T.post('statuses/update', { status: 'Nama dia ' + data.employee.name }, function (err, data, response) {
       console.log(data)
     })
   });
